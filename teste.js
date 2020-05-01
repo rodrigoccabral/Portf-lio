@@ -28,36 +28,14 @@ function showSlides(n) {
 
  /*Hamburger*/
  function myFunction(x) {
+  var classe1 = document.getElementsByClassName('container change');
+
   x.classList.toggle("change");
+
+  if (classe1.length > 0) {
+      document.getElementById("myNav").style.height = "100%";
+} else {
+    document.getElementById("myNav").style.height = "0%";
 }
 
-
-
-
-
-
-
-
-
-
-
-/*Curtain*/
-
-  /* Open when someone clicks on the span element*/ 
-
-
-
-
-  function myTeste() {
-document.getElementById("myNav").style.height = "100%";
-  } 
-
-
-
-  /* Close when someone clicks on the "x" symbol inside the overlay */
-
-
- function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-  }
-  
+}
