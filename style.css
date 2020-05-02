@@ -1,22 +1,44 @@
 
-body::-webkit-scrollbar {
-  width: 5px;
 
+body {
+  background-color: #2f2f2f;
+  overflow-y: hidden;
 }
 
 /*Transição de pagina*/
 .transition-fade {
   opacity: 1;
-  transition: .25s;
-
+  transition: 500ms;
+  transform: translateX(1);
+  transform-origin: left;
+  transform: translateY(0);
 }
 
 html.is-animating .transition-fade {
-  opacity: 0;
+  opacity: 1;
+  transform: translateX(100%);
 
 }
 
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateX(1);
+}
+
+.transition-swipe {
+  transition: 500ms;
+  transform: translateY(0);
+}
+
+html.is-animating .transition-swipe {
+  transform: translateY(100px);
+}
+
 /* Track */
+body::-webkit-scrollbar {
+  width: 5px;
+
+}
 body::-webkit-scrollbar-track {
   background: rgb(130, 135, 136);
 
@@ -51,11 +73,10 @@ body::-webkit-scrollbar-thumb:hover {
   
   /* Next & previous buttons */
   .prev, .next {
-    cursor: pointer;
-    position: absolute;
+    cursor: pointer; 
     top: 45%;
     width: auto;
-    margin-top: -30px;
+    margin-top: 250px;
     padding: 16px;
     color: #888;
     background-color: #2f2f2f;
@@ -76,7 +97,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   .prev {
     position: absolute;
-    left: 65px;;
+    left: 65px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
@@ -110,7 +131,6 @@ body::-webkit-scrollbar-thumb:hover {
   .active, .dot:hover {
     background-color: #717171;
   }
-  
 
   /*Hamburger*/
 
@@ -120,10 +140,12 @@ body::-webkit-scrollbar-thumb:hover {
     position: absolute;
     top: 35px;
     right:60px;
-    z-index: 9998;
+    z-index: 999;
   }
   
   .bar1, .bar2, .bar3 {
+    position: relative;
+    z-index: 9999;
     width: 35px;
     height: 5px;
     background-color: #7A7A7A;
@@ -137,7 +159,10 @@ body::-webkit-scrollbar-thumb:hover {
     transform: rotate(-45deg) translate(-9px, 6px);
   }
   
-  .change .bar2 {opacity: 0;}
+  .change .bar2 {
+    opacity: 0;
+  }
+  
   
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
@@ -205,14 +230,11 @@ body::-webkit-scrollbar-thumb:hover {
     }
   }
 
-
-
   /*Redes sociais sidenav*/
 #mySidenav {
-
   position: fixed;
-  left: 0;
-  top: calc(50% - (280px / 2));
+  left: -7px;
+  margin-top: 80px;
 }
   
   /* Style the links inside the sidenav */
@@ -317,6 +339,7 @@ ul {
   position: absolute;
   left: 261px;
   top: 250px;
+  
 }
 
 li {
@@ -326,11 +349,14 @@ li {
   background-color: white;
   margin-block-end: 30px;
   margin-left: 18px;
+  
 }
 
 .container_foto {
   position: relative;
-  width: 50%;
+  width: 100%;
+  box-shadow: 10px 6px 0 rgba(0,0,0,.15);
+
 }
 
 .container_foto:hover .imagem {
@@ -348,6 +374,8 @@ li {
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 25px;
+
 }
 
 .middle {
@@ -456,6 +484,11 @@ li {
 
 .input:focus {
   outline: none;
+  color: #fff;
+}
+
+.input:active {
+  color: #fff;
 }
 
 .button {

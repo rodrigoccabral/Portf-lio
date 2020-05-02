@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="overflow: hidden;">
+<body style= "overflow-x: hidden; overflow-y: hidden;">
+
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
 
     <!-- The overlay -->
 <div id="myNav" class="overlay">
@@ -24,13 +30,9 @@
       <!-- Slideshow container -->  
   <div class="slideshow-container">
   
-  
-    <div id="teste" class="container" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
     <main id="swup" class="transition-fade">
+
+
     <!-- Página 3 -->
     <div class="mySlides">
         <p id="titulo3">Get in touch</p>
@@ -43,6 +45,7 @@
                         <button class="button" id="input-btn" type="submit">Submit</button>
                       </form>
       </div>
+      <a class="prev" href="/page2.html">&#10094;</a>
     <main>
         <!-- Next/prev buttons 
         <button class="prev" onclick="window.location.href='page2.html'">&#10094;</button>-->
@@ -50,7 +53,7 @@
   
    
 
-    <a class="prev" href="/page2.html">&#10094;</a>
+
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script defer src="index.js"></script>
 

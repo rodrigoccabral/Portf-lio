@@ -6,34 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style= "overflow-x: hidden; overflow-y: scroll;">
+<body style= "overflow-x: hidden; overflow-y: hidden;">
+            <!-- The overlay -->
+            <div class="container" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
 
-    <!-- The overlay -->
-<div id="myNav" class="overlay">
+  <div id="myNav" class="overlay">
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+        
+        </div>
 
-    <!-- Overlay content -->
-    <div class="overlay-content">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
-  
-  </div>
+    <main id="swup" class="transition-fade">   
 
-      <!-- Slideshow container -->  
-  <div class="slideshow-container">
-  
 
-    <div id="teste" class="container" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-
-    <main id="swup" class="transition-fade">
+           <!-- Slideshow container -->  
+    <div class="slideshow-container">
         <!-- Página 2 -->
-        <div class="mySlides" style= "overflow: visible;" >
+        <div class="mySlides" >
           
                 <p id="titulo2">web developer portfolio</p>
          
@@ -44,7 +42,7 @@
       
                              <li>
                               <div class="container_foto">
-                                <img class="imagem"src="foto.jpg" alt="Foto_teste" style="height: 250px; width: 340px;"> 
+                                <img class="imagem"src="print1.png" alt="Foto_teste" style="height: 250px; width: 340px;"> 
                                   <button class="middle">
                                     <div class="text">Vá para o site</div>
                                   </button>
@@ -108,15 +106,11 @@
                 </div>
 
           </div>
+          <a class="prev" href="/index.html">&#10094;</a>
+
+          <a class="next" href="/page3.html">&#10095;</a>
           <main>
          
-   <a class="prev" href="/index.html">&#10094;</a>
-
-  <a class="next" href="/page3.html">&#10095;</a>
-<!--
-      Next/prev buttons 
-      <button class="prev" onclick="window.location.href='index.html'">&#10094;</button>
-      <button class="next" onclick="window.location.href='page3.html'">&#10095;</button>-->
  
       <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
       <script defer src="index.js"></script>

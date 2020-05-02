@@ -6,33 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="overflow: hidden;">
+<body style= "overflow-x: hidden; overflow-y: hidden;">
+            <!-- The overlay -->
+            <div class="container" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            
+  <div id="myNav" class="overlay">
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+        
+        </div>
 
-<!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-
-</div>
-<main id="swup" class="transition-fade">
+  <main id="swup" class="transition-fade">
     <!-- Slideshow container -->  
-<div class="slideshow-container">
-
-
-  <div id="teste" class="container" onclick="myFunction(this)">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div>
+    <div class="slideshow-container">
 
     <!-- Página 1 -->
     <div class="mySlides">
+
 
       <div id="texto">
                     
@@ -47,27 +46,30 @@
         </div>
         
 
-      <div id="mySidenav" class="sidenav">
-        <a href="#" id="about">Facebook</a>
-        <a href="#" id="blog">Github</a>
-        <a href="#" id="projects">Linkedin</a>
-        <a href="#" id="contact">Twitter</a>
-      </div>
-
-
+        <div id="mySidenav" class="sidenav">
+          <a href="#" id="about">Facebook</a>
+          <a href="#" id="blog">Github</a>
+          <a href="#" id="projects">Linkedin</a>
+          <a href="#" id="contact">Twitter</a>
+        
+        </div>
+ 
 
     </div>
 
-    
-      <a class="next" href="/page2.html">&#10095;</a>
+    <a class="next" href="/page2.html">&#10095;</a>
+
 
       <!-- Next/prev buttons 
       <button class="next" onclick="window.location.href='page2.html'">&#10095;</button>-->
    
   </div>
+  
 
 </main>  
+
   <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+  <script src="./dist/SwupSlideTheme.js"></script>
   <script defer src="index.js"></script>
 
 </body>
