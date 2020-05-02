@@ -1,4 +1,7 @@
+  /*Transição de paginas*/
 
+  const swup = new Swup()
+   
   /*Hamburger*/
 
  function myFunction(x) {

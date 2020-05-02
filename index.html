@@ -20,7 +20,7 @@
   </div>
 
 </div>
-
+<main id="swup" class="transition-fade">
     <!-- Slideshow container -->  
 <div class="slideshow-container">
 
@@ -35,13 +35,15 @@
     <div class="mySlides">
 
       <div id="texto">
-
+                    
         <p id="titulo">Olá, meu nome é Rodrigo</p> 
 
         <p id="corpo">I am an award-winning full-stack web developer and UI/UX javascript specialist. <br>
                       Check out my articles, React and React Native UI components at the code laboratory. <br>
                       Feel free to take a look at my latest projects on the web portfolio page. <br>         
                       Remotely available UTC−1 to UTC+8. rafael@caferati.me_</p>
+
+                                    
         </div>
         
 
@@ -56,11 +58,16 @@
 
     </div>
 
-      <!-- Next/prev buttons -->
-      <button class="next" onclick="window.location.href='page2.html'">&#10095;</button>
+    
+      <a class="next" href="/page2.html">&#10095;</a>
 
+      <!-- Next/prev buttons 
+      <button class="next" onclick="window.location.href='page2.html'">&#10095;</button>-->
+   
   </div>
 
+</main>  
+  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
   <script defer src="index.js"></script>
 
 </body>
