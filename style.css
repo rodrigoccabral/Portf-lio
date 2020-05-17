@@ -95,14 +95,63 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 3px 0 0 3px;
   }
 
+  .next:hover {
+    color: white;
+    transform: translate3d(30px,0,0);
+    transition: all .5s;
+  }
+
+  .next:hover  #HiddenTextNext {
+    display: block;
+    
+
+  }
+
+  .prev:hover #HiddenTextPrev {
+    display: block;
+
+  }
+  #HiddenTextPrev {
+    display: none;
+    position: absolute;
+    left: 75px;
+    top: 10px;
+    color: #8a8a8a;
+    font-size: 30px;
+}
+
+.prev:hover #HiddenTextPrev {
+  display: block;
+}
+
+  #HiddenTextNext {
+    display: none;
+    position: absolute;
+    left: -90px;
+    top: 10px;
+    color: #8a8a8a;
+    font-size: 30px;
+}
+
+.next:hover  #HiddenTextNext {
+  display: block;
+}
+
+
+  
+  .prev:focus, .next:focus {
+    outline: none;
+  }
+
   .prev {
     position: absolute;
     left: 65px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    color: white;
+  .prev:hover {
+    transform: translate3d(-30px,0,0);
+    transition: all .5s;
   }
   
   .prev:focus, .next:focus {
