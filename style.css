@@ -2,8 +2,55 @@
 
 body {
   background-color: #2f2f2f;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
+#fb {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 30px;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#about:hover #fb {
+  visibility: visible;
+}
+
+#gh {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 30px;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#blog:hover #gh {
+  visibility: visible;
+}
+
+#ln {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 30px;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#projects:hover #ln {
+  visibility: visible;
+}
+
+#tw {
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  left: 30px;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#contact:hover #tw {
+  visibility: visible;
+}
+
+
 
 /*Transição de pagina*/
 .transition-fade {
@@ -60,8 +107,8 @@ body::-webkit-scrollbar-thumb:hover {
 
   .mySlides {
     padding: 80px;
-    height: 1200px;
-    width: 100%;
+    height: 470px;
+    width: 88%;
     top: 0;
     left: 0;
     right: 0;
@@ -73,6 +120,7 @@ body::-webkit-scrollbar-thumb:hover {
   
   /* Next & previous buttons */
   .prev, .next {
+    position: fixed;
     cursor: pointer; 
     top: 45%;
     width: auto;
@@ -90,7 +138,7 @@ body::-webkit-scrollbar-thumb:hover {
   
   /* Position the "next button" to the right */
   .next {
-    position: absolute;
+    position: fixed;
     right: 65px;
     border-radius: 3px 0 0 3px;
   }
@@ -102,10 +150,9 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .next:hover  #HiddenTextNext {
-    display: block;
-    
-
+    display: block; 
   }
+
 
   .prev:hover #HiddenTextPrev {
     display: block;
@@ -113,8 +160,8 @@ body::-webkit-scrollbar-thumb:hover {
   }
   #HiddenTextPrev {
     display: none;
-    position: absolute;
-    left: 75px;
+    position: fixed;
+    left: 65px;
     top: 10px;
     color: #8a8a8a;
     font-size: 30px;
@@ -127,7 +174,7 @@ body::-webkit-scrollbar-thumb:hover {
   #HiddenTextNext {
     display: none;
     position: absolute;
-    left: -90px;
+    left: -115px;
     top: 10px;
     color: #8a8a8a;
     font-size: 30px;
@@ -144,7 +191,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .prev {
-    position: absolute;
+    position: fixed;
     left: 65px;
   }
   
@@ -162,23 +209,6 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: center;
     padding: 20px;
     background: #ddd;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  /* Add a background color to the active dot/circle */
-  .active, .dot:hover {
-    background-color: #717171;
   }
 
   /*Hamburger*/
@@ -203,7 +233,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
 
-  /*.change .bar1 {
+  .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
   }
@@ -216,7 +246,7 @@ body::-webkit-scrollbar-thumb:hover {
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
-  }*/
+  }
 
 
 
@@ -306,21 +336,82 @@ body::-webkit-scrollbar-thumb:hover {
 /* The about link: 20px from the top with a green background */
 #about {
   top: 20px;
+  height: 22px;
   background-color: #4868ad;
+}
+
+.fa-facebook {
+  text-align: right;
+  position: absolute;
+  right: 33px;
+  font-size: 20px;
+  visibility: visible;
+}
+
+#about:hover .fa-facebook{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.fa-github {
+  text-align: right;
+  position: absolute;
+  right: 33px;
+  font-size: 20px;
+}
+
+#blog:hover .fa-github {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.fa-linkedin {
+  text-align: right;
+  position: absolute;
+  right: 33px;
+  font-size: 20px;
+}
+
+#projects:hover .fa-linkedin {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.fa-twitter {
+  text-align: right;
+  position: absolute;
+  right: 33px;
+  font-size: 20px;
+}
+
+#contact:hover .fa-twitter {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 #blog {
   top: 80px;
+  height: 22px;
   background-color: #4e545a;
 }
 
 #projects {
   top: 140px;
+  height: 22px;
   background-color: #0077ba;
 }
 
 #contact {
   top: 200px;
+  height: 22px;
   background-color: #3299ff;
 }
 
@@ -518,13 +609,42 @@ li {
   font-family: Lato,Helvetica,Arial,sans-serif;
 }
 
-.input{
+#name{
   width: 635px;
   position: absolute;
   height: 60px;
   top: 278px;
   left: 300px;
   background-color: #2f2f2f;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #cec6c6;
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  font-size: 18px;
+}
+
+#email{
+  width: 635px;
+  position: absolute;
+  height: 60px;
+  top: 350px;
+  left: 300px;
+  background-color: #2f2f2f;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #cec6c6;
+  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  font-size: 18px;
+}
+
+#message{
+  width: 635px;
+  position: absolute;
+  height: 60px;
+  top: 420px;
+  left: 300px;
+  background-color: #2f2f2f;
+  color: #fff;
   border: none;
   border-bottom: 1px solid #cec6c6;
   font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
@@ -543,7 +663,7 @@ li {
 .button {
   position: absolute;
   left: 300px;
-  top: 370px;
+  top: 530px;
   padding: 15px 25px;
   font-size: 24px;
   text-align: center;

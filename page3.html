@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style= "overflow-x: hidden; overflow-y: hidden;">
 
-    <!-- The overlay -->
-<div id="myNav" class="overlay">
+<head>
+  <link rel="stylesheet" href="pure.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div id="error"></div>
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a href="/index.html" onclick="closeNav()">Sobre</a>
+      <a href="/page1.html" onclick="closeNav()">Sobre</a>
       <a href="/page2.html" onclick="closeNav()">Portfolio</a>
       <a href="/page3.html" onclick="closeNav()">Contato</a>
     </div>
-  
+
   </div>
-  
-    <main id="swup" class="transition-fade">
+  <!-- The overlay -->
+  <div id="teste" class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <main id="swup" class="transition-fade">
 
-                  <!-- The overlay -->
-      <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
 
-      <!-- Slideshow container -->  
-      <div class="slideshow-container">
-    <!-- Página 3 -->
-    <div class="mySlides">
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Página 3 -->
+      <div class="mySlides">
         <p id="titulo3">Get in touch</p>
         <p id="corpo3">If you wanna get in touch, talk to me about a project collaboration or just say hi, </br>
-                       fill up the awesome form below or send an email to 
-                       rafael@caferati.me
-                       and ~let's talk.</p>
-                      <form action="">
-                        <input name="nome" class="input" placeholder="Fill with your name" id="nome" type="text">
-                        <button class="button" id="input-btn" type="submit">Submit</button>
-                      </form>
-      </div>
-      <a class="prev" href="/page2.html"><p id="HiddenTextPrev">portfolio</p>&#10094;</a>
-    <main>
+          fill up the awesome form below or send an email to
+          rafael@caferati.me
+          and ~let's talk.</p>
 
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-    <script defer src="index.js"></script>
 
+        <form class="gform pure-form pure-form-stacked" onsubmit="return teste(); return true;" id="form" 
+        action="https://script.google.com/macros/s/AKfycbybv1k-jrOvOyiaP85ISVSYmQQXMXyYkW_VGbwEHg/exec" method="POST">
+          <div class="form-elements">
+            
+            <input name="name" class="input" placeholder="Fill with your name" id="name" type="text" autocomplete="off">
+            <input name="email" class="input" placeholder="Fill with your email" id="email" type="text"
+              autocomplete="off">
+            <input name="message" class="input" placeholder="Fill with your message" id="message" type="text"
+              autocomplete="off">
+
+            <button class="button" id="input-btn" type="submit">Submit</button>
+
+          </div>
+          </div>
+
+        </form>
+
+      <a class="prev" href="/page2.html">
+        <p id="HiddenTextPrev">portfolio</p>&#10094;
+      </a>
+      <main>
+
+
+
+
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
+    <script data-no-js type="text/javascript" src="swup.min.js"></script>
+
+        <!--<script src="./dist/SwupSlideTheme.js"></script>-->
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>       
+ 
+        <script type="text/javascript" src="index.js"></script>
+
+
+
+<!-- END -->
 </body>
+
 </html>
