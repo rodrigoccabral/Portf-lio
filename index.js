@@ -85,7 +85,8 @@
         timer: 2000
       })
 
-
+      reset();
+      
       return true;
       
       //reset();
